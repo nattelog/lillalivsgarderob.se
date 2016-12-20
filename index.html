@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="llg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="lib/font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='style.css'>
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+    <!-- Verviene font. -->
+    <script src="https://use.typekit.net/kjk0zig.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- An Angular directive that makes it possible to use the 'view'-tag. -->
+    <script>
+        var app = angular.module('llg', []);;
+
+        app.directive('view', function(){
+            return {
+                restrict: 'E',
+                templateUrl: function(elem, attr){
+                    return 'views/' + attr.name + '.html';
+                }
+            }
+        });
+
+        app.controller('footer', function($scope, $window){
+            var d = new Date();
+            $scope.year = d.getFullYear();
+
+            $scope.openFacebook = function(){
+                $window.open('http://www.facebook.com/lillalivsgarderob/', '_blank');
+            };
+
+            $scope.openInstagram = function(){
+                $window.open('http://www.instagram.com/lillalivsgarderob/', '_blank');
+            };
+        });
+    </script>
+
+    <title>Lilla Livs Garderob</title>
+    <link rel="shortcut icon" href="./res/crown-pink.ico">
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="container-fluid full-background blouse-background">
+    <div class="container header-container">
+        <div class="header-item">
+            <view class="header-logo" name="logo"></view>
+            <p class="header-quote">En second hand butik på landet</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- PAGE 2 -->
+<div class="container-fluid">
+    <div class="container section-container">
+        <div class="row">
+            <h1>Välkommen!</h1>
+            <p>Vi är en second hand butik som tar emot och säljer begagnade barnkläder på kommission. Vi har även mammakläder,
+                babytillbehör, leksaker och barnskor. Att sälja på kommission innebär att du lämnar in det du vill sälja till oss
+            och vi säljer det åt dig.</p>
+            <p>Snabbt, enkelt och smidigt!</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1><span class="fa fa-map-marker pink"></span> Hitta hit</h1>
+                <p>Du hittar vår butik mittemot Byrsta brandstation utanför Kumla.</p>
+                <p>Byrsta 114, 692 93 Kumla</p>
+            </div>
+            <div class="col-sm-6">
+                <h1><span class="fa fa-clock-o cyan"></span> Öppettider</h1>
+                <p>Onsdag 10:00 - 18:00</p>
+                <p>Torsdag 10:00 - 18:00</p>
+                <p>Lördag 10:00 - 14:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- PAGE 3 -->
+<div class="container-fluid full-background shoes-background">
+    <div class="container text-center">
+        <div class="dashed-box">
+            <p>Vi hänger ständigt ut nya plagg i butiken, så besök oss ofta och gör fynd!</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- PAGE 4 -->
+<div class="container-fluid">
+    <div class="container section-container">
+        <div class="row">
+            <h1>Hur funkar det?</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="dashed-circle cyan">
+                    <h1>1</h1>
+                </div>
+                <p>Samla ihop det du vill sälja och kom in till oss. Vi tar emot barnkläder från nyfödd upp till storlek 152 samt skor, leksaker, babytillbehör
+                    och mammakläder. Allting ska vara helt, rent och i fint skick.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashed-circle pink">
+                    <h1>2</h1>
+                </div>
+                <p>Om vi anser att dina varor är godkända sätter vi ett pris efter varans skick, märke och popularitet. Vi låter varorna
+                    hänga i butiken i totalt 12 veckor.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashed-circle cyan">
+                    <h1>3</h1>
+                </div>
+                <p>Efter 12 veckor hör vi av oss till dig och berättar hur försäljningen gått och hur mycket pengar du får. Skulle det
+                    finnas osålda varor kvar får du välja om du vill hämta dem eller lämna dem till oss.</p>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Kan jag tjäna på detta?</h1>
+            <p>Vi säljer på kommission, vilket betyder att du får betalt varefter dina varor har sålts. Du får tillbaka 40% av det satta
+            försäljningspriset. För varor med ett försäljningspris över 300:- får du 50% tillbaka. Ta gärna en ordentlig titt på vår <a data-toggle="modal" data-target="#policyModal">
+                genomgående policy</a> som har lite kompletterande information till det som står ovanför. Kom också ihåg att du är mer än
+                välkommen att bara titta förbi och fynda bland de varor andra har lämnat.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- PAGE 5 -->
+<div class="container-fluid full-background field-background">
+    <div class="container text-center">
+        <div class="dashed-box">
+            <p>Att handla begagnat är smart både för plånboken och miljön.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<div class="container-fluid" ng-controller="footer">
+    <div class="container section-container footer-section">
+        <div class="row">
+            <div class="col-sm-4 text-left">
+                <h2>Om</h2>
+                <p>Lilla Livs Garderob är en enskild firma som ägs av Hanna Svensén.</p>
+            </div>
+            <div class="col-sm-4 text-left">
+                <h2>Kontakt</h2>
+                <p>073-612 55 30</p>
+                <p>info@lillalivsgarderob.se</p>
+                <p>Byrsta 114, 692 93 Kumla</p>
+            </div>
+            <div class="col-sm-4 text-left footer-social">
+                <div class="dashed-circle cyan link" ng-click="openFacebook()">
+                    <span class="fa fa-facebook facebook-logo"></span>
+                </div>
+                <div class="dashed-circle pink link" ng-click="openInstagram()">
+                    <span class="fa fa-instagram instagram-logo"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center copyright-declaration">
+            <p>&copy; Hanna Svensén {{year}}</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- POLICY MODAL -->
+<view name="policy-modal"></view>
+
+</body>
+</html>

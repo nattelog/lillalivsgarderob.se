@@ -1,0 +1,236 @@
+/*
+    FONTS
+*/
+
+@font-face {
+    font-family: MoonFlowerBold;
+    src: url(./res/fonts/moon-flower-bold-webfont.eot);
+    src: url(./res/fonts/moon-flower-bold-webfont?#iefix) format('embedded-opentype'),
+    url(./res/fonts/moon-flower-bold-webfont.woff2) format('woff2'),
+    url(./res/fonts/moon-flower-bold-webfont.woff) format('woff'),
+    url(./res/fonts/moon-flower-bold-webfont.ttf) format('truetype'),
+    url(./res/fonts/moon-flower-bold-webfont.svg#moon_flower_boldregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: MoonFlower;
+    src: url(./res/fonts/moon-flower-webfont.eot);
+    src: url(./res/fonts/moon-flower-webfont?#iefix) format('embedded-opentype'),
+    url(./res/fonts/moon-flower-webfont.woff2) format('woff2'),
+    url(./res/fonts/moon-flower-webfont.woff) format('woff'),
+    url(./res/fonts/moon-flower-webfont.ttf) format('truetype'),
+    url(./res/fonts/moon-flower-webfont.svg#moon_flowerregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+    font-family: MoonFlowerBold, sans-serif;
+    font-size: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #464646;
+}
+
+h2 {
+    font-family: MoonFlower, sans-serif;
+    font-size: 40px;
+    color: #464646;
+}
+
+p {
+    font-size: 20px;
+    color: #898989;
+}
+
+a, .link {
+    cursor: pointer;
+}
+
+
+/*
+    CONTAINER
+*/
+
+.container {
+    max-width: 960px;
+    text-align: center;
+}
+
+.section-container {
+    margin-bottom: 25px;
+}
+
+
+/*
+    HEADER
+*/
+
+.header-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-item {
+    align-self: center;
+}
+
+.header-logo {
+    display: block;
+    margin: 150px 0 50px 0;
+}
+
+.header-quote {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 50px 0 150px 0;
+}
+
+
+/*
+    FOOTER
+*/
+
+.footer-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.copyright-declaration {
+    margin-top: 25px;
+}
+
+.footer-social > * {
+    margin-right: 25px;
+}
+
+
+/*
+    BACKGROUNDS, COLORS, ICONS
+*/
+
+.blouse-background {
+    background: url(./res/blouse.jpg);
+}
+
+.field-background {
+    background: url(./res/wheat.jpg);
+}
+
+.shoes-background {
+    background: url(./res/pegs.jpg);
+}
+
+.full-background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-background-repeat: no-repeat;
+    -moz-background-repeat: no-repeat;
+    -o-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -webkit-background-position: center center;
+    -moz-background-position: center center;
+    -o-background-position: center center;
+    background-position: center center;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pink {
+    color: #F5B4D2;
+    fill: #F5B4D2;
+}
+
+.cyan {
+    color: #9DDDDC;
+    fill: #9DDDDC;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.facebook-logo {
+    font-size: 45px;
+    margin: 4px 0 4px 10px !important;
+}
+
+.instagram-logo {
+    font-size: 40px;
+    margin: 7px 0 0 9px !important;
+}
+
+
+/*
+    DASHED BOXES
+*/
+
+.dashed-box {
+    border: dashed 1px;
+    border-radius: 2px;
+    padding: 15px;
+    display: inline-block;
+    margin: 150px 0 150px 0;
+}
+
+.dashed-box > * {
+    margin: 0;
+    color: inherit;
+}
+
+.dashed-circle {
+    border: dashed 1px;
+    border-radius: 35px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+}
+
+.dashed-circle > * {
+    margin: 0;
+    color: inherit;
+}
+
+.btn-dashed {
+    border: dashed 1px #464646;
+    background-color: transparent;
+    font-family: "verveine", sans-serif;
+    color: #464646;
+    font-size: 20px;
+}
+
+
+/*
+    MODAL
+*/
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-header, .modal-footer {
+    text-align: center;
+}
+
+.modal-header h1 {
+    margin: 0;
+}
+
+.modal-body > .row {
+    margin-top: -20px;
+}
